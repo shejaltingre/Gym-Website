@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BEROTOT Gym</title>
+
+  <!-- Remixicon -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- ====== INTERNAL CSS (Enhanced) ====== -->
+  <style>
+    :root {
+      --first-color: #ff4d4d;
+      --dark: #0f0f0f;
+      --light: #ffffff;
+      --gray: #bfbfbf;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: var(--dark); color: var(--light); line-height: 1.6; }
+    .container { max-width: 1100px; margin: auto; padding: 1rem; }
+    .grid { display: grid; gap: 1.5rem; }
+    .section { padding: 4rem 0; }
+
+    /* ===== NAV ===== */
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .nav__logo { font-size: 1.5rem; font-weight: bold; color: var(--first-color); }
+    .nav__list { display: flex; gap: 1.5rem; list-style: none; }
+    .nav__link { color: var(--light); text-decoration: none; }
+    .button {
+      background: var(--first-color);
+      color: #fff;
+      padding: 0.7rem 1.4rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .button:hover { opacity: 0.85; }
+
+    /* ===== HOME ===== */
+    .home__title { font-size: 3rem; margin: 0.5rem 0 1rem; }
+    .home__subtitle { color: var(--first-color); font-weight: bold; }
+    .home__description { color: var(--gray); margin-bottom: 1.5rem; }
+
+    /* ===== CARDS ===== */
+    .program__container,
+    .pricing__container,
+    .choose__group { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+
+    .program__card,
+    .pricing__card {
+      background: #1a1a1a;
+      padding: 1.5rem;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .program__card:hover,
+    .pricing__card:hover { transform: translateY(-5px); }
+
+    .program__title { color: var(--first-color); margin-bottom: 0.5rem; }
+    .program__description { color: var(--gray); font-size: 0.9rem; }
+
+    .pricing__number { font-size: 2rem; color: var(--first-color); margin: 0.5rem 0; }
+    .pricing__list { list-style: none; margin: 1rem 0; }
+    .pricing__item { font-size: 0.9rem; margin: 0.3rem 0; color: var(--gray); }
+
+    .choose__number { font-size: 2rem; color: var(--first-color); }
+    .choose__subtitle { color: var(--gray); }
+
+    /* ===== FORM ===== */
+    input {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 0.8rem;
+      border-radius: 6px;
+      border: none;
+    }
+    .calculate__message,
+    #contact-message { margin-top: 0.5rem; font-size: 0.9rem; }
+
+    /* ===== FOOTER ===== */
+    .footer { text-align: center; border-top: 1px solid #222; }
+    .footer__logo { color: var(--first-color); font-size: 1.5rem; }
+    .footer__description { color: var(--gray); margin: 0.5rem 0 1rem; }
+    .footer__copy { display: block; margin-top: 2rem; color: var(--gray); font-size: 0.8rem; }
+  </style>
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header class="header section">
+    <nav class="nav container">
+      <a href="#" class="nav__logo">BEROTOT</a>
+      <ul class="nav__list">
+        <li><a href="#home" class="nav__link">Home</a></li>
+        <li><a href="#program" class="nav__link">Program</a></li>
+        <li><a href="#choose" class="nav__link">Choose Us</a></li>
+        <li><a href="#pricing" class="nav__link">Pricing</a></li>
+      </ul>
+      <a href="#" class="button">Register Now</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ===== HOME ===== -->
+    <section class="home section" id="home">
+      <div class="container">
+        <span class="home__subtitle">MAKE YOUR</span>
+        <h1 class="home__title">BODY SHAPE</h1>
+        <p class="home__description">
+          In here we will help you to shape and build your ideal body and live your life to the fullest.
+        </p>
+        <a href="#" class="button">Get Started</a>
+      </div>
+    </section>
+
+    <!-- ===== PROGRAM ===== -->
+    <section class="program section" id="program">
+      <div class="container">
+        <h2>Our Program</h2>
+        <div class="program__container grid">
+          <div class="program__card"><h3 class="program__title">Flex Muscle</h3><p class="program__description">Creating tension that's temporarily making the muscle fibers smaller or contracted.</p></div>
+          <div class="program__card"><h3 class="program__title">Cardio Exercise</h3><p class="program__description">Exercise your heart rate up and keeps it up for a prolonged period of time.</p></div>
+          <div class="program__card"><h3 class="program__title">Basic Yoga</h3><p class="program__description">Diaphragmatic this is the most common breathing technique you'll find in yoga.</p></div>
+          <div class="program__card"><h3 class="program__title">Weight Lifting</h3><p class="program__description">Attempts a maximum weight single lift of a barbell loaded with weight plates.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHOOSE ===== -->
+    <section class="choose section" id="choose">
+      <div class="container">
+        <h2>WHY CHOOSE US ?</h2>
+        <p class="home__description">Choose your favorite class and start now. Remember the only bad workout is the one you didn't do.</p>
+        <div class="choose__group grid">
+          <div><h3 class="choose__number">200+</h3><p class="choose__subtitle">Total Members</p></div>
+          <div><h3 class="choose__number">50+</h3><p class="choose__subtitle">Best trainers</p></div>
+          <div><h3 class="choose__number">25+</h3><p class="choose__subtitle">Programs</p></div>
+          <div><h3 class="choose__number">100+</h3><p class="choose__subtitle">Awards</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING ===== -->
+    <section class="pricing section" id="pricing">
+      <div class="container">
+        <h2>OUR SPECIAL PLAN</h2>
+        <div class="pricing__container grid">
+          <div class="pricing__card">
+            <h3>BASIC PACKAGE</h3>
+            <div class="pricing__number">$120</div>
+            <ul class="pricing__list">
+              <li class="pricing__item">5 Days In A Week</li>
+              <li class="pricing__item">01 Sweatshirt</li>
+              <li class="pricing__item">01 Bottle of Protein</li>
+              <li class="pricing__item">Access to Videos</li>
+              <li class="pricing__item">Muscle Stretching</li>
+            </ul>
+            <button class="button">Purchase Now</button>
+          </div>
+
+          <div class="pricing__card">
+            <h3>PREMIUM PACKAGE</h3>
+            <div class="pricing__number">$240</div>
+            <ul class="pricing__list">
+              <li class="pricing__item">5 Days In A Week</li>
+              <li class="pricing__item">01 Sweatshirt</li>
+              <li class="pricing__item">01 Bottle of Protein</li>
+              <li class="pricing__item">Access to Videos</li>
+              <li class="pricing__item">Muscle Stretching</li>
+            </ul>
+            <button class="button">Purchase Now</button>
+          </div>
+
+          <div class="pricing__card">
+            <h3>DIAMOND PACKAGE</h3>
+            <div class="pricing__number">$420</div>
+            <ul class="pricing__list">
+              <li class="pricing__item">5 Days In A Week</li>
+              <li class="pricing__item">01 Sweatshirt</li>
+              <li class="pricing__item">01 Bottle of Protein</li>
+              <li class="pricing__item">Access to Videos</li>
+              <li class="pricing__item">Muscle Stretching</li>
+            </ul>
+            <button class="button">Purchase Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BMI ===== -->
+    <section class="calculate section">
+      <div class="container">
+        <h2>CALCULATE YOUR BMI</h2>
+        <p class="home__description">The body mass index (BMI) calculator calculates body mass index from your weight and height.</p>
+        <form id="calculate-form">
+          <input type="number" placeholder="Height (cm)" id="calculate-cm" />
+          <input type="number" placeholder="Weight (kg)" id="calculate-kg" />
+          <button class="button" type="submit">Calculate Now</button>
+        </form>
+        <p class="calculate__message" id="calculate-message"></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer section">
+    <div class="container">
+      <h3 class="footer__logo">BEROTOT</h3>
+      <p class="footer__description">Subscribe for company updates below.</p>
+      <form id="contact-form">
+        <input type="email" placeholder="Your Email" id="contact-user" />
+        <button class="button">Subscribe</button>
+      </form>
+      <p id="contact-message"></p>
+      <span class="footer__copy">© Copyright Bedimcode. All rights reserved</span>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // ===== BMI =====
+    const form = document.getElementById('calculate-form');
+    const cm = document.getElementById('calculate-cm');
+    const kg = document.getElementById('calculate-kg');
+    const message = document.getElementById('calculate-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!cm.value || !kg.value) {
+        message.textContent = 'Fill in the Height and Weight';
+        message.style.color = 'red';
+        setTimeout(() => (message.textContent = ''), 3000);
+        return;
+      }
+
+      const height = cm.value / 100;
+      const bmi = (kg.value / (height * height)).toFixed(2);
+      let status = bmi < 18.5 ? 'skinny' : bmi < 25 ? 'healthy' : 'overweight';
+
+      message.textContent = `Your BMI is ${bmi} and you are ${status}`;
+      message.style.color = 'lime';
+      setTimeout(() => (message.textContent = ''), 4000);
+
+      cm.value = '';
+      kg.value = '';
+    });
+
+    // ===== EMAIL =====
+    const contactForm = document.getElementById('contact-form');
+    const contactUser = document.getElementById('contact-user');
+    const contactMessage = document.getElementById('contact-message');
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!contactUser.value) {
+        contactMessage.textContent = 'You must enter your email';
+        contactMessage.style.color = 'red';
+        setTimeout(() => (contactMessage.textContent = ''), 3000);
+        return;
+      }
+
+      contactMessage.textContent = 'You registered successfully';
+      contactMessage.style.color = 'lime';
+      setTimeout(() => (contactMessage.textContent = ''), 3000);
+      contactUser.value = '';
+    });
+  </script>
+</body>
+</html>
